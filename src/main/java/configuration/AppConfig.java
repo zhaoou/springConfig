@@ -1,11 +1,8 @@
 package configuration;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 import beans.Bread;
 import beans.Cheese;
@@ -27,8 +24,8 @@ public class AppConfig {
 			@Qualifier("salami") Coudiment three
 			) {
 		
-		Sandwich sandwich = new Sandwich(one, two, three, bread);
-		
+		Sandwich sandwich = new Sandwich(one, two, three);
+		sandwich.setTheBread(ryeBread());
 		return sandwich;
 	}
 	

@@ -15,6 +15,11 @@ public class Sandwich {
 		this.thirdCoudiment = thirdCoudiment;
 		this.ryeBread = ryeBread;
 	}
+	public Sandwich(Coudiment firstCoudiment, Coudiment secondCoudiment, Coudiment thirdCoudiment)  {
+		this.firstCoudiment = firstCoudiment;
+		this.secondCoudiment = secondCoudiment;
+		this.thirdCoudiment = thirdCoudiment;
+	}
 
 	public void setFirstCoudiment(Coudiment coudiment) {
 		// TODO Auto-generated method stub
